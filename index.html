@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Français — Vocabulaire &amp; Entraînement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+  <header class="app">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="flag"><i class="b"></i><i class="w"></i><i class="r"></i></span>
+        <div>
+          <h1>Français</h1>
+          <small><span id="total-count">0</span> words · Unité préliminaire → Unité 4</small>
+        </div>
+      </div>
+      <nav class="tabs">
+        <button class="active" data-view="browse">Browse</button>
+        <button data-view="train">Train</button>
+        <button data-view="grammar">Grammar</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ BROWSE ============ -->
+    <section id="view-browse" class="view active">
+      <h2 class="section">Vocabulary</h2>
+      <p class="lead">Every word from the units, grouped by lesson and theme.</p>
+
+      <div class="controls">
+        <input type="search" id="browse-search" placeholder="Search French or English…" />
+        <span class="count" id="browse-count"></span>
+      </div>
+      <div class="chip-row" id="browse-chips" style="margin-bottom:18px"></div>
+
+      <div id="browse-list"></div>
+    </section>
+
+    <!-- ============ TRAIN ============ -->
+    <section id="view-train" class="view">
+      <h2 class="section">Translation training</h2>
+      <p class="lead">Type the translation. Accents and parentheses are ignored, and you can self-grade close answers.</p>
+
+      <div class="train-setup" id="train-setup">
+        <div class="field">
+          <label>Direction</label>
+          <div class="seg" id="dir-seg">
+            <button class="active" data-dir="fr2en">French → English</button>
+            <button data-dir="en2fr">English → French</button>
+            <button data-dir="mixed">Mixed</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Which words?</label>
+          <div class="seg" id="scope-seg"></div>
+        </div>
+
+        <div class="field">
+          <label>How many?</label>
+          <div class="seg" id="count-seg">
+            <button data-count="10">10</button>
+            <button class="active" data-count="20">20</button>
+            <button data-count="40">40</button>
+            <button data-count="all">All</button>
+          </div>
+        </div>
+
+        <button class="btn full" id="start-quiz">Start session</button>
+        <p class="hint">Tip: press <kbd>Enter</kbd> to check, then <kbd>Enter</kbd> again to advance.</p>
+      </div>
+
+      <!-- quiz -->
+      <div class="quiz" id="train-quiz" style="display:none">
+        <div class="quiz-top">
+          <div class="progress"><i id="progress-bar"></i></div>
+          <span class="score-pill" id="score-pill"></span>
+        </div>
+        <div class="card-q">
+          <div class="q-meta" id="q-meta"></div>
+          <div class="q-prompt" id="q-prompt"></div>
+          <div class="q-dir" id="q-dir"></div>
+          <input class="q-input" id="q-input" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          <div class="feedback" id="q-feedback"></div>
+          <div class="row-btns">
+            <button class="btn ghost" id="q-skip">Skip / show</button>
+            <button class="btn" id="q-action">Check</button>
+          </div>
+          <div class="hint" id="q-num" style="margin-top:14px"></div>
+        </div>
+      </div>
+
+      <!-- results -->
+      <div class="results" id="train-results" style="display:none">
+        <div class="big" id="result-score"></div>
+        <div class="sub" id="result-sub"></div>
+        <div class="row-btns" style="max-width:420px;margin:0 auto">
+          <button class="btn ghost" id="retry-missed">Retry missed</button>
+          <button class="btn" id="new-quiz">New session</button>
+        </div>
+        <div class="missed" id="result-missed"></div>
+      </div>
+    </section>
+
+    <!-- ============ GRAMMAR ============ -->
+    <section id="view-grammar" class="view">
+      <h2 class="section">Grammar</h2>
+      <p class="lead">Conjugation and structure drills.</p>
+      <div id="grammar-body">
+        <div class="placeholder" id="grammar-placeholder">
+          <h3>Ready when you are 📘</h3>
+          <p>Send me the grammar pages and this section fills in automatically —<br>
+             explanations, examples, and fill-in-the-blank conjugation drills.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
