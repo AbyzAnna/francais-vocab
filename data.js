@@ -638,6 +638,54 @@ const VOCAB = [
    }
    ========================================================================== */
 const GRAMMAR = [
+  /* ---------------- 1A.2 ---------------- */
+  {
+    id: "1A2", unit: "Unité 1", lesson: "1A", code: "1A.2",
+    title: "Numbers 0–60",
+    goal: "Say how many items or people there are",
+    intro: "Numbers in French follow patterns, as they do in English. Learn 0–30 first; the patterns help you learn 31–60.",
+    blocks: [
+      { type: "table", caption: "Numbers 0–30",
+        head: ["0–10", "11–20", "21–30"],
+        rows: [
+          ["0 zéro", "—", "—"],
+          ["1 un", "11 onze", "21 vingt et un"],
+          ["2 deux", "12 douze", "22 vingt-deux"],
+          ["3 trois", "13 treize", "23 vingt-trois"],
+          ["4 quatre", "14 quatorze", "24 vingt-quatre"],
+          ["5 cinq", "15 quinze", "25 vingt-cinq"],
+          ["6 six", "16 seize", "26 vingt-six"],
+          ["7 sept", "17 dix-sept", "27 vingt-sept"],
+          ["8 huit", "18 dix-huit", "28 vingt-huit"],
+          ["9 neuf", "19 dix-neuf", "29 vingt-neuf"],
+          ["10 dix", "20 vingt", "30 trente"],
+        ] },
+      { type: "table", caption: "Numbers 31–60",
+        head: ["31–34", "35–38", "39, 40, 50, 60"],
+        rows: [
+          ["31 trente et un", "35 trente-cinq", "39 trente-neuf"],
+          ["32 trente-deux", "36 trente-six", "40 quarante"],
+          ["33 trente-trois", "37 trente-sept", "50 cinquante"],
+          ["34 trente-quatre", "38 trente-huit", "60 soixante"],
+        ] },
+      { type: "text", html: "When counting a series, use <b>un</b> for <i>one</i>. When <i>one</i> precedes a noun, use <b>un</b> with a masculine noun and <b>une</b> with a feminine noun (<i>un objet, une télévision</i>)." },
+      { type: "text", html: "<b>21</b> = <b>vingt et un</b> (with <b>et</b>, no hyphen). Before a feminine noun, add <b>-e</b>: <i>vingt et une choses</i>." },
+      { type: "text", html: "<b>31–39, 41–49, 51–59</b> follow the same pattern as 21–29 (e.g. <b>trente et un</b>, <b>trente-deux</b>). Add <b>-e</b> to <b>trente et un, quarante et un, cinquante et un</b> before a feminine noun." },
+    ],
+    drillTitle: "Write each number in French (words).",
+    drills: [
+      { q: "16 = ___", a: "seize", note: "11–20" },
+      { q: "21 = ___", a: "vingt et un", note: "et, no hyphen" },
+      { q: "29 = ___", a: "vingt-neuf", note: "21–30" },
+      { q: "14 = ___", a: "quatorze", note: "11–20" },
+      { q: "38 = ___", a: "trente-huit", note: "31–39" },
+      { q: "40 = ___", a: "quarante", note: "tens" },
+      { q: "47 = ___", a: "quarante-sept", note: "41–49" },
+      { q: "52 = ___", a: "cinquante-deux", note: "51–59" },
+      { q: "60 = ___", a: "soixante", note: "tens" },
+    ],
+  },
+
   /* ---------------- 1B.1 ---------------- */
   {
     id: "1B1", unit: "Unité 1", lesson: "1B", code: "1B.1",
@@ -686,6 +734,43 @@ const GRAMMAR = [
       { q: "Nous ___ à Québec.", a: "sommes", note: "nous" },
       { q: "Vous ___ Mme Lacroix?", a: "êtes", note: "vous" },
       { q: "Marie ___ chanteuse.", a: "est", note: "elle" },
+    ],
+  },
+
+  /* ---------------- 1B.2 ---------------- */
+  {
+    id: "1B2", unit: "Unité 1", lesson: "1B", code: "1B.2",
+    title: "Adjective agreement",
+    goal: "Describe people, places, and things",
+    intro: "Adjectives describe people, places, and things, and are often used with être to point out qualities. Many French adjectives are cognates of English words.",
+    blocks: [
+      { type: "text", html: "Most French adjectives <b>agree in number and gender</b> with the noun they modify. To make an adjective feminine, add <b>-e</b> to the masculine form. If it already ends in an unaccented <b>-e</b>, add nothing (<i>agréable, optimiste, sympathique</i>)." },
+      { type: "text", html: "To make an adjective plural, add <b>-s</b>. Use the masculine plural for a mixed group. <i>Marc et David sont intelligents. · Anne et Claire sont intelligentes.</i>" },
+      { type: "table", caption: "Agreement of patient",
+        head: ["", "singular", "plural"],
+        rows: [
+          ["masculine", "patient", "patients"],
+          ["feminine", "patiente", "patientes"],
+        ] },
+      { type: "text", html: "French adjectives usually come <b>after</b> the noun they modify (when not directly after a form of <b>être</b>). <i>Ce sont des élèves brillantes. · Bernard est un homme agréable et poli.</i>" },
+      { type: "text", html: "<b>Adjectives of nationality</b> are not capitalized. Add <b>-ne</b> to masculine forms ending in <b>-ien</b> to make them feminine (<i>canadien → canadienne</i>); add <b>-e</b> to most others." },
+      { type: "ex", items: [
+        { fr: "Il est américain.", en: "He is American." },
+        { fr: "Elle est française.", en: "She is French." },
+      ] },
+      { type: "text", html: "Adjectives that already end in <b>-s</b> (like <i>sénégalais</i>) keep the same masculine singular and plural form, but add <b>-e</b> for the feminine (<i>sénégalaise</i>) and <b>-es</b> for the feminine plural." },
+      { type: "text", html: "To ask nationality/heritage: <b>Quelle est ta/votre nationalité?</b> or <b>Tu es / Vous êtes de quelle origine?</b> Adjectives after <b>nationalité</b> and <b>origine</b> are feminine (both nouns are feminine): <i>Je suis de nationalité canadienne.</i>" },
+    ],
+    drillTitle: "Write in the correct forms of the adjectives.",
+    drills: [
+      { q: "Natalie est ___ (brillant).", a: "brillante", note: "fem. sing." },
+      { q: "Ils sont ___ (anglais).", a: "anglais", note: "masc. pl. (ends in -s)" },
+      { q: "Elle adore la littérature ___ (indien).", a: "indienne", note: "fem. (-ien → -ienne)" },
+      { q: "Les actrices sont ___ (impatient).", a: "impatientes", note: "fem. pl." },
+      { q: "Christelle est ___ (amusant).", a: "amusante", note: "fem. sing." },
+      { q: "Les élèves sont ___ (poli) en cours.", a: "polis", note: "masc./mixed pl." },
+      { q: "Mme Castillon est très ___ (occupé).", a: "occupée", note: "fem. sing." },
+      { q: "Luc et moi, nous sommes ___ (sincère).", a: "sincères", note: "pl. (ends in -e)" },
     ],
   },
 
@@ -813,6 +898,45 @@ const GRAMMAR = [
     ],
   },
 
+  /* ---------------- 2B.2 ---------------- */
+  {
+    id: "2B2", unit: "Unité 2", lesson: "2B", code: "2B.2",
+    title: "Telling time",
+    goal: "Ask and answer questions about time of day",
+    intro: "You use the verb être with numbers to tell time. Ask the time with Quelle heure est-il?",
+    blocks: [
+      { type: "text", html: "<b>On the hour:</b> [number] + <b>heures</b>. Use <b>une heure</b> for one o'clock. <i>Il est six heures. · Il est une heure.</i>" },
+      { type: "text", html: "<b>Hour to half-hour:</b> state the minutes past the hour. <i>Il est neuf heures cinq. · Il est onze heures vingt.</i>" },
+      { type: "text", html: "<b>et quart</b> = quarter past (15 min); <b>et demie</b> = half past (30 min). <i>Il est sept heures et quart. · Il est six heures et demie.</i>" },
+      { type: "text", html: "<b>Half-hour to the hour:</b> use <b>moins</b> (minus) and subtract from the next hour. <i>Il est trois heures moins dix. · Il est une heure moins le quart.</i>" },
+      { type: "text", html: "To say <i>at</i> what time something happens, use the preposition <b>à</b>. <i>Le cours commence à neuf heures.</i>" },
+      { type: "table", caption: "Expressions for telling time",
+        head: ["", ""],
+        rows: [
+          ["à quelle heure? — (at) what time/when?", "midi — noon"],
+          ["de l'après-midi — in the afternoon", "minuit — midnight"],
+          ["du matin — in the morning", "pile — sharp, on the dot"],
+          ["du soir — in the evening", "presque — almost"],
+          ["en avance — early", "tard / tôt — late / early"],
+          ["en retard — late", "vers — about"],
+        ] },
+      { type: "text", html: "French has <u>no</u> a.m./p.m. — use <b>du matin</b>, <b>de l'après-midi</b>, <b>du soir</b>. The <b>24-hour clock</b> is used for official time, with only plain numbers (no <i>et demie</i>, <i>moins le quart</i>): <i>Le film est à vingt-deux heures trente-sept (10:37 p.m.).</i>" },
+      { type: "text", html: "When writing times with digits, separate the hour and minutes with <b>h</b> (for <i>heure</i>) instead of a colon: <b>3h25, 11h10, 21h45</b>." },
+    ],
+    drillTitle: "Write out the correct times (in words) according to the cues.",
+    drills: [
+      { q: "(1:00 a.m.) Il est ___ du matin.", a: "une heure", note: "on the hour" },
+      { q: "(2:50 a.m.) Il est ___ du matin.", a: "trois heures moins dix", note: "moins" },
+      { q: "(8:30 p.m.) Il est ___ du soir.", a: "huit heures et demie", note: "et demie" },
+      { q: "(10:08 a.m.) Il est ___ du matin.", a: "dix heures huit", note: "minutes past" },
+      { q: "(7:15 p.m.) Il est ___ du soir.", a: "sept heures et quart", note: "et quart" },
+      { q: "(4:05 p.m.) Il est ___ de l'après-midi.", a: "quatre heures cinq", note: "minutes past" },
+      { q: "(4:45 a.m.) Il est ___ du matin.", a: "cinq heures moins le quart", note: "moins le quart" },
+      { q: "(3:20 a.m.) Il est ___ du matin.", a: "trois heures vingt", note: "minutes past" },
+      { q: "(12:00 a.m.) Il est ___.", a: "minuit", note: "midnight" },
+    ],
+  },
+
   /* ---------------- 4A.1 ---------------- */
   {
     id: "4A1", unit: "Unité 4", lesson: "4A", code: "4A.1",
@@ -861,6 +985,48 @@ const GRAMMAR = [
       { q: "Elle est ___ église dimanche matin.", a: "à l'", note: "à + l' (vowel)" },
       { q: "Le soir, je rentre ___ maison à sept heures.", a: "à la", note: "à + la" },
       { q: "Est-ce que le prof parle ___ élèves?", a: "aux", note: "à + les" },
+    ],
+  },
+
+  /* ---------------- 4A.2 ---------------- */
+  {
+    id: "4A2", unit: "Unité 4", lesson: "4A", code: "4A.2",
+    title: "Interrogative words",
+    goal: "Ask and answer information questions",
+    intro: "Besides yes/no questions, many questions seek information. Use interrogative words with est-ce que or inversion to ask for specifics.",
+    blocks: [
+      { type: "table", caption: "Interrogative words",
+        head: ["", ""],
+        rows: [
+          ["à quelle heure? — at what time?", "quand? — when?"],
+          ["combien (de)? — how many?/how much?", "que/qu'…? — what?"],
+          ["comment? — how?/what?", "quel(le)(s)? — which?/what?"],
+          ["où? — where?", "(à/avec/pour) qui? — (to/with/for) who(m)?"],
+          ["pourquoi? — why?", "quoi? — what?"],
+        ] },
+      { type: "text", html: "A very informal option is to place the interrogative word <b>after</b> the verb: <i>Tu t'appelles comment? · Tu habites où?</i>" },
+      { type: "text", html: "When <b>qui</b> (who) is the <u>subject</u>, follow it directly with a 3rd-person singular verb: <i>Qui invite Patrice à dîner?</i> When <b>qui</b> (whom) is the <u>object</u>, follow it with <b>est-ce que</b> + subject/verb or with inversion: <i>Qui est-ce que tu regardes? / Qui regardes-tu?</i>" },
+      { type: "text", html: "<b>quand?</b> and <b>à quelle heure?</b> both mean <i>when?</i> — use <b>quand</b> for a day/date, <b>à quelle heure</b> for a specific time of day." },
+      { type: "text", html: "<b>que/qu'</b> (what) with est-ce que or inversion is always followed by a subject and verb: <i>Que regardons-nous? · Qu'est-ce que tu vas manger?</i>" },
+      { type: "text", html: "<b>quoi</b> (what) is used after a preposition (+ est-ce que / inversion), or after the verb in informal questions with no preposition: <i>À quoi penses-vous? · Elle étudie quoi?</i> Say <b>Comment?</b> or <b>Pardon?</b> (informally <b>Quoi?</b>) when you don't understand." },
+      { type: "table", caption: "The interrogative adjective quel(le)(s)",
+        head: ["", "singular", "plural"],
+        rows: [
+          ["masculine", "quel", "quels"],
+          ["feminine", "quelle", "quelles"],
+        ] },
+      { type: "text", html: "<b>quel</b> means <i>what</i> or <i>which</i> and agrees in gender and number with the noun: <i>Quel restaurant aimes-tu? · Quelles filles vont à la cantine?</i> Use <b>quel + être + noun</b> (<i>Quel est ton numéro de téléphone?</i>), and <b>qu'est-ce que</b> in most other cases. As an exclamation: <i>Quel beau garçon! · Quelles grandes maisons!</i>" },
+    ],
+    drillTitle: "Give the interrogative word(s) that complete each question.",
+    drills: [
+      { q: "___ allez-vous?", a: "Comment", note: "how are you" },
+      { q: "___ est-ce que vous allez faire après le cours?", a: "Qu'", note: "Qu'est-ce que" },
+      { q: "___ est-ce que tu ne travailles pas?", a: "Pourquoi", note: "why" },
+      { q: "Avec ___ est-ce qu'on va au cinéma ce soir?", a: "qui", note: "with whom" },
+      { q: "___ d'élèves y a-t-il?", a: "Combien", note: "how many" },
+      { q: "___ musées vas-tu visiter?", a: "Quels", note: "quel + masc. pl." },
+      { q: "___ est-ce qu'on dîne ce soir?", a: "Où", note: "where" },
+      { q: "De ___ parlez-vous?", a: "quoi", note: "after preposition" },
     ],
   },
 ];
